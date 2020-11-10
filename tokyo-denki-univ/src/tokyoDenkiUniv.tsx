@@ -1,4 +1,5 @@
 import React from 'react';
+import {TwitterShareButton} from 'react-share'
 
 interface State {
     shuffleValue: string
@@ -15,7 +16,7 @@ export class TokyoDenkiUniv extends React.Component<{}, State> {
 
         this.state = {
             display: '',
-            shuffleValue: '東京電機大学'
+            shuffleValue: '東京電機大学',
         }
     }
 
@@ -56,6 +57,11 @@ export class TokyoDenkiUniv extends React.Component<{}, State> {
                     <button onClick={this.reload}>
                         リロード
                     </button>
+                </div>
+                <div className="share">
+                    <TwitterShareButton url={window.location.href} title={`${this.state.display}\n\n`} via="cateiru">
+                        ツイート
+                    </TwitterShareButton>
                 </div>
             </div>
         )
