@@ -1,0 +1,13 @@
+.title {
+    text-align: center;
+    color: white;
+    background-color: #2d56a0;
+}
+
+h1 {
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+    font-size: 3rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+}

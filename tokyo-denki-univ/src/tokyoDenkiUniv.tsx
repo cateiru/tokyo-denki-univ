@@ -1,5 +1,7 @@
 import React from 'react';
-import {TwitterShareButton} from 'react-share'
+import {TwitterShareButton, TwitterIcon} from 'react-share'
+import './tdu.css'
+import refresh from './Refresh.svg'
 
 interface State {
     shuffleValue: string
@@ -15,20 +17,19 @@ export class TokyoDenkiUniv extends React.Component<{}, State> {
         this.changeValue = this.changeValue.bind(this)
 
         this.state = {
-            display: '',
+            display: this.createString('東京電機大学'.split('')),
             shuffleValue: '東京電機大学',
         }
     }
 
     changeValue(event: React.ChangeEvent<HTMLInputElement>) {
         this.setState(state => ({
-            shuffleValue: event.target.value
+            shuffleValue: event.target.value,
+            display: this.createString(event.target.value.split(''))
         }))
     }
 
-    createString(): string {
-        const value = this.state.shuffleValue.split('')
-
+    createString(value: string[]): string {
         const shuffled = []
 
         for(let i = 0; value.length > i; ++i){
@@ -40,27 +41,27 @@ export class TokyoDenkiUniv extends React.Component<{}, State> {
 
     reload() {
         this.setState(state => ({
-            display: this.createString()
+            display: this.createString(state.shuffleValue.split(''))
         }))
     }
 
     render() {
         return (
-            <div>
+            <div className="tdu">
                 <div className="shuffleValue">
-                    <input type="text" value={this.state.shuffleValue} onChange={this.changeValue} />
+                    <input className="inputValue" type="text" value={this.state.shuffleValue} onChange={this.changeValue} />
+                </div>
+                <div className="reload">
+                    <button onClick={this.reload}>
+                        <img src={refresh} alt="refresh" />
+                    </button>
                 </div>
                 <div className="display">
                     {this.state.display}
                 </div>
-                <div className="reload">
-                    <button onClick={this.reload}>
-                        リロード
-                    </button>
-                </div>
                 <div className="share">
-                    <TwitterShareButton url={window.location.href} title={`${this.state.display}\n\n`} via="cateiru">
-                        ツイート
+                    <TwitterShareButton url={`${window.location.href}\n`} title={`${this.state.shuffleValue}\n↓\n${this.state.display}\n\n`} hashtags={["TDUメーカー"]}>
+                        <TwitterIcon round={true} />
                     </TwitterShareButton>
                 </div>
             </div>

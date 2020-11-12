@@ -1,0 +1,46 @@
+.tdu {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.inputValue {
+    margin: 0;
+    width: 99%;
+    font-size:  3rem;
+    color: #2d56a0;
+    text-align: center;
+    background-color: white;
+    border: none;
+    outline: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+}
+
+.shuffleValue, .display {
+    margin: 1rem;
+}
+
+.reload {
+    text-align: center;
+}
+
+.reload button {
+    border: none;
+    outline: none;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.reload img {
+    width: 2rem;
+}
+
+
+.display {
+    font-size: 3rem;
+    color: #2d56a0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    vertical-align: middle;
+}
