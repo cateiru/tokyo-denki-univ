@@ -1,10 +1,14 @@
 .title {
     text-align: center;
-    color: white;
     background-color: #2d56a0;
 }
 
-h1 {
+.title a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.title h1 {
     margin: 0;
     padding: 1rem 0 1rem 0;
     font-size: 3rem;

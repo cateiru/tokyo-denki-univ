@@ -7,7 +7,9 @@ function App() {
     <div className="App">
       <div className="title">
         <h1>
-          TDUメーカー
+          <a href="https://github.com/yuto51942/tokyo-denki-univ" target="_blank" rel="noopener noreferrer">
+            TDUメーカー
+          </a>
         </h1>
       </div>
       <TokyoDenkiUniv />
