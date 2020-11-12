@@ -3,11 +3,15 @@
     margin: 2rem 0 0 0;
 }
 
+.shuffleValue {
+    width: 100%;
+}
+
 .inputValue {
     margin: 0;
     width: 100%;
     font-size: 3rem;
-    color: #2d56a0;
+    color: #4f4f4f;
     text-align: center;
     background-color: white;
     border: none;
@@ -17,7 +21,7 @@
 }
 
 .shuffleValue, .display {
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
     text-align: center;
 }
 
