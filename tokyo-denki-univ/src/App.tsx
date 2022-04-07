@@ -1,18 +1,18 @@
 import React from 'react';
-import {TokyoDenkiUniv} from './tokyoDenkiUniv'
 import './app.css'
+import Maker from './Maker';
 
 function App() {
   return (
     <div className="App">
       <div className="title">
         <h1>
-          <a href="https://github.com/yuto51942/tokyo-denki-univ" target="_blank" rel="noopener noreferrer">
+          <a href="https://tdu.app" target="_blank" rel="noopener noreferrer">
             TDUメーカー
           </a>
         </h1>
       </div>
-      <TokyoDenkiUniv />
+      <Maker />
     </div>
   )
 }

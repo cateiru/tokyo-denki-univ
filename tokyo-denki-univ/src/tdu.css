@@ -20,7 +20,8 @@
     font-weight: 500;
 }
 
-.shuffleValue, .display {
+.shuffleValue,
+.display {
     margin: 1rem 0 1rem 0;
     text-align: center;
 }
@@ -35,6 +36,7 @@
     background-color: white;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .reload img {
